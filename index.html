@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Encriptador</title>
+</head>
+
+<body>
+
+         <!-- Toggle de idioma -->
+    <div class="toggle" id="languageToggle">
+         <img src="/asset/img/spain.png" class="toggle-icon" alt="Left Language Icon">
+        <label class="switch">
+                <input type="checkbox" id="languageCheckbox">
+                <span class="slider round"></span>
+        </label>
+        <img src="/asset/img/uk.png" class="toggle-icon" alt="Right Language Icon">
+    </div>
+    </div>
+
+
+
+    <article>
+        <!-- Logo de la página -->
+        <img id="logo" src="/asset/img/icono-alura.png" alt="Logo">
+        <!-- Título principal -->
+        <h1>Encriptador De Texto</h1>
+      
+        <!-- Contenedor derecho -->
+        <div class="container">
+
+            <div class="right-container">
+                <!-- Área de salida para el mensaje encriptado/desencriptado -->
+                <div class="output-area" id="outputArea">
+                    <!-- Contenedor de la imagen -->
+                    <div class="image-container">
+                        <img id="robot" src="/asset/img/muneco.png" alt="Robot">
+                    </div>
+                    <!-- Mensajes de salida e instrucciones -->
+                    <p class="output-message" id="outputMessage" style="margin-bottom: 0px;margin-top: 32px;">Ningún mensaje fue encontrado</p>
+                    <p class="output-instructions" id="outputInstructions" style="margin-bottom: 0px;margin-top: 16px;"> Ingresa el texto que desees encriptar o desencriptar.</p>
+                    <!-- Texto de salida -->
+                    <p class="output-text"></p>
+                    <!-- Botones de copiar y recargar -->
+                    <div class="button-container" id="buttonContainer" style="display: none;">
+                        <button class="copy-btn" onclick="copyToClipboard()">Copiar</button>
+                        <button class="reload-btn" onclick="reloadOutput()">&#8635;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main>
+            <!-- Contenedor izquierdo -->
+            <div class="left-container">
+                <!--Label Texto para ingresar el mensaje -->
+                <textarea id="inputText" placeholder="Ingrese el texto aquí"></textarea>
+                <!-- Texto informativo -->
+                <p class="info-text">
+                    <img class="alert" src="/asset/img/alerta.png" alt="Alerta">
+                    Solo letras minúsculas y sin acento
+                </p>
+                <!-- Botones de encriptar y desencriptar -->
+                <div class="buttons">
+                    <button class="encrypt-btn" onclick="encrypt()">Encriptar</button>
+                    <button class="decrypt-btn" onclick="decrypt()">Desencriptar</button>
+                </div>
+            </div>
+        </main>
+    </article>
+    <!-- Pie de página -->
+    <footer>
+       <ul class="footer-social">
+          
+            <li><a href="https://github.com/Mauricio0415?tab=repositories"><img src="/asset/img/icono-github.png" alt="GitHub"></a></li>
+            <li><a href="https://www.linkedin.com/in/mauricio-ojeda-fernandez-890a43170/"><img src="/asset/img/icono-linkedin.png" alt="LinkedIn"></a></li>
+        
+        </ul>
+       <p>Alura Challenge 2024 </p> 
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
