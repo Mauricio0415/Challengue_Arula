@@ -103,7 +103,13 @@ body {
     border-radius: 50%;
 }
 
+input:checked + .slider {
+    background-color: #2196F3;
+}
 
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
 /* Añadir estilo para el contenedor de los botones */
 
 #languageToggle {
